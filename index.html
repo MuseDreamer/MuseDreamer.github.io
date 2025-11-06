@@ -3,18 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NEON // HOME</title>
+  <title>Neon Terminal // Home</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body class="page page-home">
-  <!-- Rain background canvas -->
+<body class="page">
   <canvas id="rain-canvas"></canvas>
 
-  <!-- Window frame -->
-  <div class="win window main-window">
+  <div class="win window">
     <div class="titlebar">
-      <div class="title">NEON // HOME</div>
+      <div class="title">NEON TERMINAL</div>
       <div class="title-controls">
         <button class="win-btn">_</button>
         <button class="win-btn">▢</button>
@@ -23,38 +21,33 @@
     </div>
 
     <div class="menu-bar">
-      <button class="menu start">Start</button>
-      <div class="menu-sep"></div>
       <nav class="menu-links">
         <a class="navlink active" href="index.html">Home</a>
         <a class="navlink" href="portfolio.html">Portfolio</a>
         <a class="navlink" href="music.html">Music</a>
         <a class="navlink" href="links.html">Links</a>
+        <a class="navlink" href="n0xt.html">N0xt</a>
       </nav>
     </div>
 
     <div class="window-body">
-      <section class="panel">
+      <section class="panel large">
         <h2>Welcome</h2>
-        <p class="muted">System initialized — Windows 95 aesthetic / modern enhancements</p>
-        <ul>
-          <li>Use the menu to open modules</li>
-          <li>Animated rain runs in the background</li>
-          <li>Page transitions are smooth — click any nav item</li>
-        </ul>
-      </section>
-
-      <section class="side-panel">
-        <h3>Quick Status</h3>
-        <p>Theme: <strong>#82E2FF</strong> / <strong>#FFFFFF</strong> / <strong>#007699</strong></p>
-        <p>Mode: Retro GUI + Modern Transitions</p>
+        <p>
+          > System initialized.<br>
+          > User detected: <strong>Ombra</strong><br>
+          > Environment: Windows95 Hybrid Shell
+        </p>
+        <p>
+          Select a module above to continue. Rain simulation active.
+        </p>
       </section>
     </div>
 
     <div class="statusbar">
-      <span>Ready</span>
-      <span>NETWORK: OK</span>
-      <span>DATE: 2025-11-05</span>
+      <span>STATUS: OK</span>
+      <span>THEME: Cyan95</span>
+      <span>MODE: GUI</span>
     </div>
   </div>
 </body>
