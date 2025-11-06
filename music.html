@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ombra | Music</title>
+  <title>Music | Ombra</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body data-boot="Initializing Sound Drivers...">
+<body>
   <canvas id="rain-canvas"></canvas>
-
-  <div id="boot-splash">
-    <div class="splash-logo">NEON TERMINAL</div>
-    <div class="splash-line"></div>
+  <div id="scene">
+    <div class="layer trees"></div>
+    <div class="layer lake"></div>
+    <div class="layer bustop"></div>
   </div>
 
   <div class="main-container">
     <header>
-      <h1>Music</h1>
+      <h1>Music Files</h1>
       <nav>
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
@@ -26,16 +26,10 @@
     </header>
 
     <section>
-      <h2>Current Tracks</h2>
-      <p>Press play to stream Ombra’s latest works.</p>
-      <audio controls>
-        <source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg">
-        Your browser does not support audio playback.
-      </audio>
-      <audio controls>
-        <source src="music/Null Processing.wip3.mp3" type="audio/mpeg">
-        Your browser does not support audio playback.
-      </audio>
+      <ul class="music-list">
+        <li><audio controls src="music/in the summer we just had Breakcore.mp3"></audio></li>
+        <li><audio controls src="music/Null Processing.wip3.mp3"></audio></li>
+      </ul>
     </section>
 
     <footer><p>© 2025 Ombra</p></footer>
