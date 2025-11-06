@@ -1,48 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ombra's Terminal // MUSIC</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NEON // Music</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="terminal-grid">
-    <header class="top-bar">
-      <span>N.Term v2.3</span>
-      <span>[ AUDIO SUBSYSTEM ONLINE ]</span>
-    </header>
+<body class="page page-music">
+  <canvas id="rain-canvas"></canvas>
 
-    <nav class="nav-bar">
-      <a href="index.html">HOME</a>
-      <a href="portfolio.html">PORTFOLIO</a>
-      <a href="music.html" class="active">MUSIC</a>
-      <a href="links.html">LINKS</a>
-    </nav>
-
-    <main class="content">
-      <p>> Loading music files...</p>
-      <div class="window">
-        <p>> TRACK_01: in the summer we just had Breakcore</p>
-        <audio controls>
-          <source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg">
-          Your browser does not support audio.
-        </audio>
-
-        <p>> TRACK_02: Null Processing.wip3</p>
-        <audio controls>
-          <source src="music/Null Processing.wip3.mp3" type="audio/mpeg">
-          Your browser does not support audio.
-        </audio>
+  <div class="win window">
+    <div class="titlebar">
+      <div class="title">NEON // MUSIC</div>
+      <div class="title-controls">
+        <button class="win-btn">_</button>
+        <button class="win-btn">▢</button>
+        <button class="win-btn close">✕</button>
       </div>
-    </main>
+    </div>
 
-    <footer class="status-bar">
-      <span>STATUS: STREAMING</span>
-      <span>SOUND: ACTIVE</span>
-      <span>MODE: Blocky UwU</span>
-    </footer>
+    <div class="menu-bar">
+      <button class="menu start">Start</button>
+      <div class="menu-sep"></div>
+      <nav class="menu-links">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="portfolio.html">Portfolio</a>
+        <a class="navlink active" href="music.html">Music</a>
+        <a class="navlink" href="links.html">Links</a>
+      </nav>
+    </div>
+
+    <div class="window-body">
+      <section class="panel large">
+        <h2>Audio Library</h2>
+
+        <div class="track">
+          <p>&gt; TRACK 01 — in the summer we just had Breakcore</p>
+          <audio controls>
+            <source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+          </audio>
+        </div>
+
+        <div class="track">
+          <p>&gt; TRACK 02 — Null Processing.wip3</p>
+          <audio controls>
+            <source src="music/Null Processing.wip3.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+          </audio>
+        </div>
+
+      </section>
+
+      <section class="side-panel">
+        <h3>Playback</h3>
+        <p>Use the controls to play / pause.</p>
+      </section>
+    </div>
+
+    <div class="statusbar">
+      <span>Audio module</span>
+      <span>OUTPUT: STEREO</span>
+      <span>MODE: GUI</span>
+    </div>
   </div>
 </body>
 </html>
