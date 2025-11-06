@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NEON // Music</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Music</title>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body class="page page-music">
+<body class="page">
   <canvas id="rain-canvas"></canvas>
 
   <div class="win window">
     <div class="titlebar">
-      <div class="title">NEON // MUSIC</div>
+      <div class="title">Music Library</div>
       <div class="title-controls">
         <button class="win-btn">_</button>
         <button class="win-btn">▢</button>
@@ -21,48 +21,30 @@
     </div>
 
     <div class="menu-bar">
-      <button class="menu start">Start</button>
-      <div class="menu-sep"></div>
       <nav class="menu-links">
         <a class="navlink" href="index.html">Home</a>
         <a class="navlink" href="portfolio.html">Portfolio</a>
         <a class="navlink active" href="music.html">Music</a>
         <a class="navlink" href="links.html">Links</a>
+        <a class="navlink" href="n0xt.html">N0xt</a>
       </nav>
     </div>
 
     <div class="window-body">
-      <section class="panel large">
-        <h2>Audio Library</h2>
+      <section class="panel">
+        <h2>Available Tracks</h2>
+        <p>in the summer we just had (Breakcore)</p>
+        <audio controls src="music/in the summer we just had Breakcore.mp3"></audio>
 
-        <div class="track">
-          <p>&gt; TRACK 01 — in the summer we just had Breakcore</p>
-          <audio controls>
-            <source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg">
-            Your browser does not support audio.
-          </audio>
-        </div>
-
-        <div class="track">
-          <p>&gt; TRACK 02 — Null Processing.wip3</p>
-          <audio controls>
-            <source src="music/Null Processing.wip3.mp3" type="audio/mpeg">
-            Your browser does not support audio.
-          </audio>
-        </div>
-
-      </section>
-
-      <section class="side-panel">
-        <h3>Playback</h3>
-        <p>Use the controls to play / pause.</p>
+        <p>Null Processing (WIP3)</p>
+        <audio controls src="music/Null Processing.wip3.mp3"></audio>
       </section>
     </div>
 
     <div class="statusbar">
-      <span>Audio module</span>
-      <span>OUTPUT: STEREO</span>
-      <span>MODE: GUI</span>
+      <span>MUSIC: READY</span>
+      <span>2 TRACKS</span>
+      <span>PLAY SAFE</span>
     </div>
   </div>
 </body>
