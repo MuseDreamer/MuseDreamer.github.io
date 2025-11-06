@@ -1,40 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEON TERMINAL // HOME</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NEON // HOME</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="terminal-grid">
-    <header class="top-bar">
-      <span>NEON TERMINAL v2.3</span>
-      <span>[ SYS-READY // ONLINE ]</span>
-    </header>
+<body class="page page-home">
+  <!-- Rain background canvas -->
+  <canvas id="rain-canvas"></canvas>
 
-    <nav class="nav-bar">
-      <a href="index.html" class="active">HOME</a>
-      <a href="portfolio.html">PORTFOLIO</a>
-      <a href="music.html">MUSIC</a>
-      <a href="links.html">LINKS</a>
-    </nav>
-
-    <main class="content">
-      <p>> SYSTEM INITIALIZED...</p>
-      <p>> Welcome, user. Type ‘help’ or select a module.</p>
-      <div class="window">
-        <p>> Access granted.</p>
-        <p>> Use the top bar to navigate.</p>
+  <!-- Window frame -->
+  <div class="win window main-window">
+    <div class="titlebar">
+      <div class="title">NEON // HOME</div>
+      <div class="title-controls">
+        <button class="win-btn">_</button>
+        <button class="win-btn">▢</button>
+        <button class="win-btn close">✕</button>
       </div>
-    </main>
+    </div>
 
-    <footer class="status-bar">
-      <span>STATUS: OK</span>
-      <span>SOUND: ON</span>
-      <span>MODE: BRUTAL</span>
-    </footer>
+    <div class="menu-bar">
+      <button class="menu start">Start</button>
+      <div class="menu-sep"></div>
+      <nav class="menu-links">
+        <a class="navlink active" href="index.html">Home</a>
+        <a class="navlink" href="portfolio.html">Portfolio</a>
+        <a class="navlink" href="music.html">Music</a>
+        <a class="navlink" href="links.html">Links</a>
+      </nav>
+    </div>
+
+    <div class="window-body">
+      <section class="panel">
+        <h2>Welcome</h2>
+        <p class="muted">System initialized — Windows 95 aesthetic / modern enhancements</p>
+        <ul>
+          <li>Use the menu to open modules</li>
+          <li>Animated rain runs in the background</li>
+          <li>Page transitions are smooth — click any nav item</li>
+        </ul>
+      </section>
+
+      <section class="side-panel">
+        <h3>Quick Status</h3>
+        <p>Theme: <strong>#82E2FF</strong> / <strong>#FFFFFF</strong> / <strong>#007699</strong></p>
+        <p>Mode: Retro GUI + Modern Transitions</p>
+      </section>
+    </div>
+
+    <div class="statusbar">
+      <span>Ready</span>
+      <span>NETWORK: OK</span>
+      <span>DATE: 2025-11-05</span>
+    </div>
   </div>
 </body>
 </html>
