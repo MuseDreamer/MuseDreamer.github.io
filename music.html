@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neon Terminal — Music</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEON TERMINAL // MUSIC</title>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <canvas id="neon-dust"></canvas>
-  <div class="terminal">
-    <header>
-      <h1 class="glow">NEON//TERMINAL</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="music.html" class="active">Music</a>
-        <a href="links.html">Links</a>
-      </nav>
+  <div class="terminal-grid">
+    <header class="top-bar">
+      <span>NEON TERMINAL v2.3</span>
+      <span>[ AUDIO SUBSYSTEM ONLINE ]</span>
     </header>
 
-    <main>
-      <h2>&gt; Music Files</h2>
-      <p>&gt; Select a track to play:</p>
+    <nav class="nav-bar">
+      <a href="index.html">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="music.html" class="active">MUSIC</a>
+      <a href="links.html">LINKS</a>
+    </nav>
 
-      <div class="audio-list">
-        <div class="track">
-          <p>&gt; Track_01: Null Processing.wip3</p>
-          <audio controls>
-            <source src="music/Null Processing.wip3.mp3" type="audio/mpeg">
-          </audio>
-        </div>
+    <main class="content">
+      <p>> Loading music files...</p>
+      <div class="window">
+        <p>> TRACK_01: in the summer we just had Breakcore</p>
+        <audio controls>
+          <source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg">
+          Your browser does not support audio.
+        </audio>
 
-        <div class="track">
-          <p>&gt; Track_02: In the Summer We Just had (Breakcore RIP)</p>
-          <audio controls>
-            <source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg">
-          </audio>
-        </div>
+        <p>> TRACK_02: Null Processing.wip3</p>
+        <audio controls>
+          <source src="music/Null Processing.wip3.mp3" type="audio/mpeg">
+          Your browser does not support audio.
+        </audio>
       </div>
     </main>
 
-    <footer>
-      <p>&gt; Playback ready — © 2025 Neon Terminal</p>
+    <footer class="status-bar">
+      <span>STATUS: STREAMING</span>
+      <span>SOUND: ACTIVE</span>
+      <span>MODE: BRUTAL</span>
     </footer>
   </div>
 </body>
