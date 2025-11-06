@@ -1,40 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEON TERMINAL // LINKS</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NEON // Links</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="terminal-grid">
-    <header class="top-bar">
-      <span>NEON TERMINAL v2.3</span>
-      <span>[ CONNECTION MODULE ACTIVE ]</span>
-    </header>
+<body class="page page-links">
+  <canvas id="rain-canvas"></canvas>
 
-    <nav class="nav-bar">
-      <a href="index.html">HOME</a>
-      <a href="portfolio.html">PORTFOLIO</a>
-      <a href="music.html">MUSIC</a>
-      <a href="links.html" class="active">LINKS</a>
-    </nav>
-
-    <main class="content">
-      <p>> Accessing external networks...</p>
-      <div class="window">
-        <p>> <a href="https://bsky.app/profile/dotsfileservice.net" target="_blank">BlueSky: dotsfileservice.net</a></p>
-        <p>> <a href="https://x.com/gentleprophett" target="_blank">X (Twitter): @gentleprophett</a></p>
-        <p>> <a href="https://www.youtube.com/@gentleprophet" target="_blank">YouTube: @gentleprophet</a></p>
+  <div class="win window">
+    <div class="titlebar">
+      <div class="title">NEON // LINKS</div>
+      <div class="title-controls">
+        <button class="win-btn">_</button>
+        <button class="win-btn">▢</button>
+        <button class="win-btn close">✕</button>
       </div>
-    </main>
+    </div>
 
-    <footer class="status-bar">
-      <span>STATUS: CONNECTED</span>
-      <span>SOUND: ON</span>
-      <span>MODE: BRUTAL</span>
-    </footer>
+    <div class="menu-bar">
+      <button class="menu start">Start</button>
+      <div class="menu-sep"></div>
+      <nav class="menu-links">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="portfolio.html">Portfolio</a>
+        <a class="navlink" href="music.html">Music</a>
+        <a class="navlink active" href="links.html">Links</a>
+      </nav>
+    </div>
+
+    <div class="window-body">
+      <section class="panel">
+        <h2>Network</h2>
+        <p>&gt; <a href="https://bsky.app/profile/dotsfileservice.net" target="_blank">BlueSky — dotsfileservice.net</a></p>
+        <p>&gt; <a href="https://x.com/gentleprophett" target="_blank">X — @gentleprophett</a></p>
+        <p>&gt; <a href="https://www.youtube.com/@gentleprophet" target="_blank">YouTube — @gentleprophet</a></p>
+      </section>
+
+      <section class="side-panel">
+        <h3>Connect</h3>
+        <p>All links open in a new tab.</p>
+      </section>
+    </div>
+
+    <div class="statusbar">
+      <span>Links exported</span>
+      <span>PROTOCOL: HTTPS</span>
+      <span>MODE: GUI</span>
+    </div>
   </div>
 </body>
 </html>
