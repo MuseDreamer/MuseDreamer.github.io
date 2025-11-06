@@ -1,117 +1,67 @@
-// Windows95-inspired UI script
-// features: rain canvas, page transitions, link sounds, nav fade
-document.addEventListener('DOMContentLoaded', () => {
-  /* -------------------------
-     sound setup (optional)
-     -------------------------*/
-  const snd = {
-    click: new Audio('sounds/click.wav'),
-    boot:  new Audio('sounds/boot.wav'),
-    type:  new Audio('sounds/type.wav')
-  };
-  // Set volumes
-  snd.click.volume = 0.25;
-  snd.boot.volume = 0.35;
-  snd.type.volume = 0.12;
-  // try to play boot (may be blocked by browser)
-  setTimeout(()=> snd.boot.play().catch(()=>{}), 400);
+// Clear caches and storage every visit
+if ('caches' in window) {
+  caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+}
+localStorage.clear();
+sessionStorage.clear();
 
-  // play click on hover for nav (pleasant feedback)
-  document.querySelectorAll('.navlink, .menu.start, .win-btn').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      snd.click.currentTime = 0;
-      snd.click.play().catch(()=>{});
-    });
-  });
+// Optional safeguard reload
+if (performance.navigation.type === 2) window.location.reload(true);
 
-  /* -------------------------
-     page transition (smooth)
-     - intercept internal links and fade-out before navigate
-     -------------------------*/
-  function attachNavFade() {
-    document.querySelectorAll('a.navlink').forEach(a => {
-      // only intercept same-origin navigation
-      a.addEventListener('click', e => {
-        const href = a.getAttribute('href');
-        if (!href || href.startsWith('http')) return; // allow external links
-        e.preventDefault();
-        document.documentElement.classList.add('page-fade-out');
-        // small delay to let animation play
-        setTimeout(() => {
-          window.location.href = href;
-        }, 360);
-      });
+// Rain animation
+const rainCanvas = document.getElementById('rain-canvas');
+if (rainCanvas) {
+  const ctx = rainCanvas.getContext('2d');
+  let drops = Array.from({ length: 150 }, () => ({
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight,
+    l: 5 + Math.random() * 10,
+    xs: -2 + Math.random() * 4,
+    ys: 10 + Math.random() * 10
+  }));
+
+  function draw() {
+    ctx.clearRect(0, 0, rainCanvas.width, rainCanvas.height);
+    ctx.strokeStyle = 'rgba(130,226,255,0.5)';
+    ctx.lineWidth = 1;
+    drops.forEach(d => {
+      ctx.beginPath();
+      ctx.moveTo(d.x, d.y);
+      ctx.lineTo(d.x + d.xs, d.y + d.l);
+      ctx.stroke();
     });
+    move();
   }
-  attachNavFade();
 
-  // fade-in on load
-  document.documentElement.classList.add('page-fade-in');
-
-  /* -------------------------
-     rain animation (canvas)
-     -------------------------*/
-  const canvas = document.getElementById('rain-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let W = innerWidth, H = innerHeight, drops = [];
-
-    function resize() { W = canvas.width = innerWidth; H = canvas.height = innerHeight; }
-    addEventListener('resize', resize);
-    resize();
-
-    // create drops
-    const COUNT = Math.floor((W*H)/10000); // density relative to screen area
-    for (let i=0;i<COUNT;i++){
-      drops.push({
-        x: Math.random()*W,
-        y: Math.random()*H,
-        l: 8 + Math.random()*12,
-        xs: -0.5 + Math.random()*1.2,
-        ys: 6 + Math.random()*10,
-        a: 0.05 + Math.random()*0.15
-      });
-    }
-
-    function draw() {
-      ctx.clearRect(0,0,W,H);
-      // slight tint
-      ctx.fillStyle = 'rgba(0,0,0,0.12)';
-      ctx.fillRect(0,0,W,H);
-
-      for (let i=0;i<drops.length;i++){
-        const d = drops[i];
-        ctx.beginPath();
-        ctx.moveTo(d.x, d.y);
-        ctx.lineTo(d.x + d.l*d.xs*0.08, d.y + d.l);
-        ctx.strokeStyle = `rgba(130,226,255,${d.a})`; // use accent color as raindrop tint
-        ctx.lineWidth = 1;
-        ctx.stroke();
-
-        d.x += d.xs;
-        d.y += d.ys;
-
-        // wrap around
-        if (d.x > W + 20 || d.x < -20 || d.y > H + 20) {
-          d.x = Math.random()*W;
-          d.y = -20;
-        }
+  function move() {
+    drops.forEach(d => {
+      d.y += d.ys;
+      d.x += d.xs;
+      if (d.y > window.innerHeight) {
+        d.x = Math.random() * window.innerWidth;
+        d.y = -20;
       }
-      requestAnimationFrame(draw);
-    }
-    draw();
+    });
   }
 
-  /* -------------------------
-     optional: keyboard shortcuts
-     -------------------------*/
-  document.addEventListener('keydown', (e) => {
-    if (e.key === '1') window.location.href = 'index.html';
-    if (e.key === '2') window.location.href = 'portfolio.html';
-    if (e.key === '3') window.location.href = 'music.html';
-    if (e.key === '4') window.location.href = 'links.html';
-  });
+  function loop() {
+    draw();
+    requestAnimationFrame(loop);
+  }
 
+  rainCanvas.width = window.innerWidth;
+  rainCanvas.height = window.innerHeight;
+  loop();
+}
+
+// Boot and click sounds
+window.addEventListener('DOMContentLoaded', () => {
+  const boot = new Audio('sounds/boot.wav');
+  const click = new Audio('sounds/click.wav');
+  boot.volume = 0.2;
+  click.volume = 0.3;
+  boot.play();
+  document.querySelectorAll('a').forEach(a =>
+    a.addEventListener('mouseenter', () => click.play())
+  );
 });
-
-
