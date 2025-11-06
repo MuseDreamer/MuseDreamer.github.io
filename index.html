@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script>
+    // Force reload if browser is using cached files
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        for (let name of names) caches.delete(name);
+      });
+    }
+    window.addEventListener('load', () => {
+      // Add a cache-busting query to linked resources
+      document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
+        const attr = el.tagName === 'LINK' ? 'href' : 'src';
+        const base = el.getAttribute(attr).split('?')[0];
+        el.setAttribute(attr, base + '?v=' + Date.now());
+      });
+    });
+  </script>
   <meta charset="UTF-8" />
   <title>Ombra | Terminal Portfolio</title>
   <link rel="stylesheet" href="style.css" />
