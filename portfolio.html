@@ -1,46 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEON TERMINAL // PORTFOLIO</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NEON // Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="terminal-grid">
-    <header class="top-bar">
-      <span>NEON TERMINAL v2.3</span>
-      <span>[ PORTFOLIO MODULE ACTIVE ]</span>
-    </header>
+<body class="page page-portfolio">
+  <canvas id="rain-canvas"></canvas>
 
-    <nav class="nav-bar">
-      <a href="index.html">HOME</a>
-      <a href="portfolio.html" class="active">PORTFOLIO</a>
-      <a href="music.html">MUSIC</a>
-      <a href="links.html">LINKS</a>
-    </nav>
-
-    <main class="content">
-      <p>> Loading skill registry...</p>
-      <div class="window">
-        <p>> skill_01: Bass Guitar — groove architecture + rhythm design</p>
-        <p>> skill_02: Piano — composition, harmony, and improvisation</p>
-        <p>> skill_03: Guitar — lead & rhythm performance, texture crafting</p>
-        <p>> skill_04: Drums — sequencing, live timing, percussive layering</p>
-        <p>> skill_05: Music Production — digital synthesis, mixing, mastering</p>
-        <p>> skill_06: Photography — digital capture, editing, visual storytelling</p>
-        <p>> skill_07: Web Design — layout systems, HTML/CSS aesthetics</p>
-        <p>> skill_08: Art — conceptual design, color theory, visual narrative</p>
+  <div class="win window">
+    <div class="titlebar">
+      <div class="title">NEON // PORTFOLIO</div>
+      <div class="title-controls">
+        <button class="win-btn">_</button>
+        <button class="win-btn">▢</button>
+        <button class="win-btn close">✕</button>
       </div>
-      <p>> Skills indexed successfully. Displaying dataset.</p>
-    </main>
+    </div>
 
-    <footer class="status-bar">
-      <span>STATUS: ACTIVE</span>
-      <span>SOUND: ON</span>
-      <span>MODE: BRUTAL</span>
-    </footer>
+    <div class="menu-bar">
+      <button class="menu start">Start</button>
+      <div class="menu-sep"></div>
+      <nav class="menu-links">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink active" href="portfolio.html">Portfolio</a>
+        <a class="navlink" href="music.html">Music</a>
+        <a class="navlink" href="links.html">Links</a>
+      </nav>
+    </div>
+
+    <div class="window-body">
+      <section class="panel large">
+        <h2>Skill Registry</h2>
+        <div class="skills-list">
+          <p>&gt; Bass Guitar — groove architecture + rhythm design</p>
+          <p>&gt; Piano — composition, harmony, improvisation</p>
+          <p>&gt; Guitar — lead & rhythm performance, texture crafting</p>
+          <p>&gt; Drums — sequencing, live timing, percussive layering</p>
+          <p>&gt; Music Production — synthesis, mixing, mastering</p>
+          <p>&gt; Photography — capture, editing, visual storytelling</p>
+          <p>&gt; Web Design — layout systems, HTML/CSS aesthetics</p>
+          <p>&gt; Art — conceptual design, color theory, visual narrative</p>
+        </div>
+      </section>
+
+      <section class="side-panel">
+        <h3>Details</h3>
+        <p>Click a skill to expand (future enhancement)</p>
+      </section>
+    </div>
+
+    <div class="statusbar">
+      <span>Skills indexed</span>
+      <span>COUNT: 8</span>
+      <span>MODE: GUI</span>
+    </div>
   </div>
 </body>
 </html>
