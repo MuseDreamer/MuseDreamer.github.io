@@ -1,14 +1,15 @@
-/* ===========================
-   NEON TUI DARK THEME
-   =========================== */
+/* ===============================
+   OMBRA TERMINAL THEME (Pixel Rain Edition)
+   =============================== */
+
 :root {
-  --bg: #0a0a0d;
+  --bg: #0a010f;
   --accent1: #461e53;
   --accent2: #661f49;
   --accent3: #84345b;
   --accent4: #d0595d;
-  --text: #f0d8e3;
-  --panel: rgba(20, 10, 20, 0.85);
+  --text: #f2f2f2;
+  --scanline-opacity: 0.05;
 }
 
 * {
@@ -17,207 +18,223 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "VT323", monospace;
+html, body {
+  width: 100%;
+  height: 100%;
   background: var(--bg);
   color: var(--text);
+  font-family: "VT323", monospace;
+  font-size: 1.2rem;
   overflow: hidden;
-  height: 100vh;
-  width: 100vw;
 }
 
-/* Animated Rain Canvas */
-#rain-canvas {
+canvas#rain-canvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
   pointer-events: none;
-  opacity: 0.45;
 }
 
-/* Layout - Brutalist TUI Windows */
+/* ===============================
+   Scene Layers
+   =============================== */
+#scene {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.layer {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat-x;
+  image-rendering: pixelated;
+  opacity: 0.8;
+  animation: move-layer 60s linear infinite;
+}
+
+.layer.trees {
+  background-image: url("images/trees.png");
+  bottom: 0;
+  animation-duration: 100s;
+}
+
+.layer.lake {
+  background-image: url("images/lake.png");
+  bottom: 0;
+  opacity: 0.6;
+  animation-duration: 80s;
+}
+
+.layer.bustop {
+  background-image: url("images/bustop.png");
+  bottom: 0;
+  opacity: 1;
+  animation-duration: 120s;
+}
+
+@keyframes move-layer {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===============================
+   Terminal Container
+   =============================== */
+
 .main-container {
   position: relative;
-  z-index: 2;
-  width: 90%;
+  z-index: 3;
+  width: 85%;
   max-width: 900px;
-  margin: 4rem auto;
-  background: var(--panel);
+  margin: 5rem auto;
+  padding: 2rem;
   border: 2px solid var(--accent3);
-  box-shadow: 0 0 12px var(--accent2);
-  padding: 1.5rem;
-  border-radius: 6px;
-  text-shadow: 0 0 4px var(--accent4);
-  animation: fadeIn 1.2s ease-in;
+  background: rgba(10, 1, 15, 0.8);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 15px var(--accent4);
+  animation: fadeIn 2s ease;
 }
 
-/* Header */
 header {
-  border-bottom: 2px solid var(--accent2);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 header h1 {
   color: var(--accent4);
-  text-shadow: 0 0 6px var(--accent4);
+  text-shadow: 0 0 10px var(--accent3);
   font-size: 2.4rem;
 }
 
-/* Navigation (TUI-styled buttons) */
-nav {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
 nav a {
+  text-decoration: none;
   color: var(--text);
-  background: var(--accent1);
-  border: 1px solid var(--accent3);
-  padding: 0.4rem 0.8rem;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.2s ease;
+  margin: 0 0.5rem;
+  transition: color 0.2s ease, text-shadow 0.3s ease;
 }
 
-nav a:hover {
-  background: var(--accent3);
+nav a:hover, nav a.active {
   color: var(--accent4);
-  box-shadow: 0 0 10px var(--accent4);
+  text-shadow: 0 0 6px var(--accent4);
 }
 
-/* Content */
-section {
-  margin-top: 1rem;
-  padding: 1rem;
-  border: 1px dashed var(--accent2);
-  background: rgba(0, 0, 0, 0.3);
-}
+/* ===============================
+   Lists, Links, Music, etc.
+   =============================== */
 
-section h2 {
-  color: var(--accent4);
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
-}
-
-/* Links Page */
-.links-list a {
-  display: block;
-  color: var(--accent4);
-  text-decoration: none;
-  padding: 0.3rem 0;
-}
-
-.links-list a:hover {
-  color: var(--accent3);
-  text-shadow: 0 0 5px var(--accent4);
-}
-
-/* Footer */
-footer {
+ul.skills, ul.music-list, .band-links ul {
+  list-style: none;
   text-align: center;
-  font-size: 0.9rem;
-  padding-top: 1rem;
-  color: var(--accent3);
 }
 
-/* Boot Splash */
-#boot-splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent4);
-  font-size: 2rem;
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 1.5s ease;
-}
-
-#boot-splash.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-#boot-splash.fade {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.splash-logo {
-  font-size: 2.5rem;
-  text-shadow: 0 0 8px var(--accent4);
-  margin-bottom: 0.5rem;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
-}
-/* ===========================
-   N0XT Band Page Styles
-   =========================== */
-
-.band-photos {
-  margin-top: 1rem;
-  text-align: center;
+ul.skills li, ul.music-list li {
+  margin: 0.5rem 0;
 }
 
 .band-photos .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin: 1rem 0;
 }
 
 .band-photos img {
   width: 100%;
-  border: 2px solid var(--accent2);
-  border-radius: 4px;
-  filter: brightness(0.8) contrast(1.1);
+  border: 2px solid var(--accent3);
+  border-radius: 3px;
+  image-rendering: pixelated;
+  filter: brightness(0.8);
   transition: all 0.3s ease;
 }
 
 .band-photos img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1) contrast(1.3);
+  filter: brightness(1.2);
   box-shadow: 0 0 10px var(--accent4);
+  transform: scale(1.02);
 }
 
-.band-links {
-  margin-top: 2rem;
+footer {
   text-align: center;
+  margin-top: 1rem;
+  opacity: 0.8;
+  font-size: 1rem;
 }
 
-.band-links ul {
-  list-style: none;
-  padding: 0;
+/* ===============================
+   Boot Splash
+   =============================== */
+
+#boot-splash {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+  animation: splashFade 3s forwards;
 }
 
-.band-links a {
+.splash-logo {
+  font-size: 2rem;
   color: var(--accent4);
-  text-decoration: none;
-  font-size: 1.1rem;
-  display: inline-block;
-  margin: 0.3rem 0.6rem;
-  border-bottom: 1px dashed var(--accent3);
-  transition: color 0.2s ease;
+  text-shadow: 0 0 10px var(--accent3);
+  margin-bottom: 1rem;
 }
 
-.band-links a:hover {
-  color: var(--accent3);
-  text-shadow: 0 0 6px var(--accent4);
+.splash-line {
+  width: 80%;
+  height: 2px;
+  background: var(--accent4);
+  animation: loadLine 2s ease-in-out forwards;
 }
 
+@keyframes loadLine {
+  from { width: 0; }
+  to { width: 80%; }
+}
+
+@keyframes splashFade {
+  0%, 70% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* ===============================
+   Scanline Flicker
+   =============================== */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    rgba(255,255,255,var(--scanline-opacity)) 0px,
+    transparent 2px,
+    rgba(0,0,0,0.02) 4px
+  );
+  pointer-events: none;
+  z-index: 5;
+  animation: flicker 0.2s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.07; }
+}
+
+/* ===============================
+   Simple Fade Animation
+   =============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
