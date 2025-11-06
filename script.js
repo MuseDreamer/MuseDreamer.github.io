@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // === Sound Effects ===
   const sounds = {
     click: new Audio("sounds/click.wav"),
     boot: new Audio("sounds/boot.wav"),
@@ -10,20 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
   sounds.type.volume = 0.15;
 
   setTimeout(() => sounds.boot.play().catch(()=>{}), 500);
-
   document.body.addEventListener("click", () => {
     sounds.click.currentTime = 0;
     sounds.click.play().catch(()=>{});
   });
 
-  // === Flicker ===
   const flicker = () => {
     document.body.classList.add("flicker");
     setTimeout(() => document.body.classList.remove("flicker"), 100);
   };
   setInterval(() => { if (Math.random() < 0.1) flicker(); }, 2000);
 
-  // === Typing ===
   const typed = document.querySelector(".typed");
   if (typed && typed.textContent.startsWith(">")) {
     const fullText = typed.textContent;
@@ -38,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 60);
   }
 
-  // === Neon Dust ===
   const canvas = document.getElementById("neon-dust");
   if (canvas) {
     const ctx = canvas.getContext("2d");
