@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ombra | Terminal Portfolio</title>
+  <title>Ombra | Terminal Home</title>
   <link rel="stylesheet" href="style.css">
+
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <script>
-    if ('caches' in window) {
-      caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
-    }
+    if ('caches' in window) caches.keys().then(names => names.forEach(n => caches.delete(n)));
     window.addEventListener('load', () => {
       document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
         const attr = el.tagName === 'LINK' ? 'href' : 'src';
@@ -20,24 +19,21 @@
     });
   </script>
 </head>
-<body data-boot="Booting Terminal Interface...">
+<body>
+  <div id="scene"></div>
   <canvas id="rain-canvas"></canvas>
-  <div id="scene">
-    <div class="layer trees"></div>
-    <div class="layer lake"></div>
-    <div class="layer bustop"></div>
-  </div>
 
   <div id="boot-splash">
-    <div class="splash-logo">Ombra Systems</div>
+    <div class="splash-logo">OMBRA SYSTEMS BOOTING...</div>
     <div class="splash-line"></div>
   </div>
 
   <div class="main-container">
     <header>
-      <h1>Ombra Terminal</h1>
+      <h1>Welcome to Ombra’s Terminal</h1>
       <nav>
         <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="music.html">Music</a>
         <a href="n0xt.html">N0XT</a>
@@ -45,14 +41,12 @@
       </nav>
     </header>
 
-    <section>
-      <p>Welcome to <strong>Ombra's</strong> interactive terminal space.  
-      Explore creative projects, music, and art — all under the neon rain.</p>
-    </section>
+    <p>Initializing systems...<br>Welcome to the digital domain of Ombra. Explore, listen, and observe.</p>
 
-    <footer><p>© 2025 Ombra / N0XT</p></footer>
+    <footer>
+      <p>© 2025 Ombra | Terminal Interface v3.1</p>
+    </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
