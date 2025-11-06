@@ -1,51 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Music</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Ombra | Music</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page">
+<body data-boot="Initializing Sound Drivers...">
   <canvas id="rain-canvas"></canvas>
 
-  <div class="win window">
-    <div class="titlebar">
-      <div class="title">Music Library</div>
-      <div class="title-controls">
-        <button class="win-btn">_</button>
-        <button class="win-btn">▢</button>
-        <button class="win-btn close">✕</button>
-      </div>
-    </div>
-
-    <div class="menu-bar">
-      <nav class="menu-links">
-        <a class="navlink" href="index.html">Home</a>
-        <a class="navlink" href="portfolio.html">Portfolio</a>
-        <a class="navlink active" href="music.html">Music</a>
-        <a class="navlink" href="links.html">Links</a>
-        <a class="navlink" href="n0xt.html">N0xt</a>
-      </nav>
-    </div>
-
-    <div class="window-body">
-      <section class="panel">
-        <h2>Available Tracks</h2>
-        <p>in the summer we just had (Breakcore)</p>
-        <audio controls src="music/in the summer we just had Breakcore.mp3"></audio>
-
-        <p>Null Processing (WIP3)</p>
-        <audio controls src="music/Null Processing.wip3.mp3"></audio>
-      </section>
-    </div>
-
-    <div class="statusbar">
-      <span>MUSIC: READY</span>
-      <span>2 TRACKS</span>
-      <span>PLAY SAFE</span>
-    </div>
+  <div id="boot-splash">
+    <div class="splash-logo">NEON TERMINAL</div>
+    <div class="splash-line"></div>
   </div>
+
+  <div class="main-container">
+    <header>
+      <h1>Music</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="music.html" class="active">Music</a>
+        <a href="n0xt.html">N0XT</a>
+        <a href="links.html">Links</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Current Tracks</h2>
+      <p>Press play to stream Ombra’s latest works.</p>
+      <audio controls>
+        <source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+      </audio>
+      <audio controls>
+        <source src="music/Null Processing.wip3.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+      </audio>
+    </section>
+
+    <footer><p>© 2025 Ombra</p></footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
