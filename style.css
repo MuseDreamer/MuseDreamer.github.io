@@ -1,1 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+body {
+  background-color: #0a0a0f;
+  color: #00ffcc;
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal {
+  width: 90%;
+  max-width: 900px;
+  padding: 2rem;
+  background: rgba(10, 10, 20, 0.9);
+  border: 1px solid #00ffcc;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffcc55;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1.glow {
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffff, 0 0 30px #ff00ff;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #9effff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+nav a.active {
+  color: #ff00ff;
+}
+
+main {
+  line-height: 1.6;
+}
+
+a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff00ff;
+}
+
+.command span {
+  color: #ff00ff;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+input[type="file"], button {
+  background: transparent;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  padding: 0.5rem;
+  font-family: inherit;
+}
+
+button:hover {
+  border-color: #ff00ff;
+  color: #ff00ff;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff00ff55;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #9effff;
+}
+
+.typed {
+  animation: typing 3s steps(30, end), blink 0.8s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00ffcc;
+  width: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
 
