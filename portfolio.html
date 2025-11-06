@@ -1,56 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Ombra | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page">
+<body data-boot="Loading Skillset Database...">
   <canvas id="rain-canvas"></canvas>
 
-  <div class="win window">
-    <div class="titlebar">
-      <div class="title">Portfolio</div>
-      <div class="title-controls">
-        <button class="win-btn">_</button>
-        <button class="win-btn">▢</button>
-        <button class="win-btn close">✕</button>
-      </div>
-    </div>
-
-    <div class="menu-bar">
-      <nav class="menu-links">
-        <a class="navlink" href="index.html">Home</a>
-        <a class="navlink active" href="portfolio.html">Portfolio</a>
-        <a class="navlink" href="music.html">Music</a>
-        <a class="navlink" href="links.html">Links</a>
-        <a class="navlink" href="n0xt.html">N0xt</a>
-      </nav>
-    </div>
-
-    <div class="window-body">
-      <section class="panel">
-        <h2>Skills</h2>
-        <ul>
-          <li>Bass Guitar</li>
-          <li>Piano</li>
-          <li>Guitar</li>
-          <li>Drums</li>
-          <li>Music Production</li>
-          <li>Photography</li>
-          <li>Web Design</li>
-          <li>Art</li>
-        </ul>
-      </section>
-    </div>
-
-    <div class="statusbar">
-      <span>PORTFOLIO READY</span>
-      <span>USER: OMBRA</span>
-      <span>OK</span>
-    </div>
+  <div id="boot-splash">
+    <div class="splash-logo">NEON TERMINAL</div>
+    <div class="splash-line"></div>
   </div>
+
+  <div class="main-container">
+    <header>
+      <h1>Portfolio</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="music.html">Music</a>
+        <a href="n0xt.html">N0XT</a>
+        <a href="links.html">Links</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Bass Guitar</li>
+        <li>Piano</li>
+        <li>Guitar</li>
+        <li>Drums</li>
+        <li>Music Production</li>
+        <li>Photography</li>
+        <li>Web Design</li>
+        <li>Art</li>
+      </ul>
+    </section>
+
+    <footer><p>© 2025 Ombra</p></footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
