@@ -5,7 +5,7 @@ if ('caches' in window) {
 localStorage.clear();
 sessionStorage.clear();
 
-// Optional safeguard reload
+// Optional reload on back/forward nav
 if (performance.navigation.type === 2) window.location.reload(true);
 
 // Rain animation
