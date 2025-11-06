@@ -166,3 +166,58 @@ footer {
   from { opacity: 0; transform: scale(0.98); }
   to { opacity: 1; transform: scale(1); }
 }
+/* ===========================
+   N0XT Band Page Styles
+   =========================== */
+
+.band-photos {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.band-photos .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.band-photos img {
+  width: 100%;
+  border: 2px solid var(--accent2);
+  border-radius: 4px;
+  filter: brightness(0.8) contrast(1.1);
+  transition: all 0.3s ease;
+}
+
+.band-photos img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) contrast(1.3);
+  box-shadow: 0 0 10px var(--accent4);
+}
+
+.band-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.band-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.band-links a {
+  color: var(--accent4);
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin: 0.3rem 0.6rem;
+  border-bottom: 1px dashed var(--accent3);
+  transition: color 0.2s ease;
+}
+
+.band-links a:hover {
+  color: var(--accent3);
+  text-shadow: 0 0 6px var(--accent4);
+}
+
