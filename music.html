@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Terminal — Music</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="neon-dust"></canvas>
+  <div class="terminal">
+    <header>
+      <h1 class="glow">NEON//TERMINAL</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="music.html" class="active">Music</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>&gt; Music Files</h2>
+      <p>&gt; Select a track to play:</p>
+
+      <div class="audio-list">
+        <div class="track">
+          <p>&gt; Track_01: Cyber Dreams</p>
+          <audio controls>
+            <source src="music/cyber_dreams.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track">
+          <p>&gt; Track_02: Night Drive</p>
+          <audio controls>
+            <source src="music/night_drive.wav" type="audio/wav">
+          </audio>
+        </div>
+
+        <div class="track">
+          <p>&gt; Track_03: Neon Reflection</p>
+          <audio controls>
+            <source src="music/neon_reflection.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&gt; Playback ready — © 2025 Neon Terminal</p>
+    </footer>
+  </div>
+</body>
+</html>
