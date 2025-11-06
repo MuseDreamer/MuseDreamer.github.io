@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neon Terminal — Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEON TERMINAL // HOME</title>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <canvas id="neon-dust"></canvas>
-  <div class="terminal">
-    <header>
-      <h1 class="glow">NEON//TERMINAL</h1>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="music.html">Music</a>
-        <a href="links.html">Links</a>
-      </nav>
+  <div class="terminal-grid">
+    <header class="top-bar">
+      <span>NEON TERMINAL v2.3</span>
+      <span>[ SYS-READY // ONLINE ]</span>
     </header>
 
-    <main>
-      <p class="typed">&gt; Welcome, user. Initializing interface...</p>
-      <p>&gt; System ready. Select a module above.</p>
+    <nav class="nav-bar">
+      <a href="index.html" class="active">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="music.html">MUSIC</a>
+      <a href="links.html">LINKS</a>
+    </nav>
+
+    <main class="content">
+      <p>> SYSTEM INITIALIZED...</p>
+      <p>> Welcome, user. Type ‘help’ or select a module.</p>
+      <div class="window">
+        <p>> Access granted.</p>
+        <p>> Use the top bar to navigate.</p>
+      </div>
     </main>
 
-    <footer>
-      <p>&gt; [System Stable] — © 2025 Neon Terminal</p>
+    <footer class="status-bar">
+      <span>STATUS: OK</span>
+      <span>SOUND: ON</span>
+      <span>MODE: BRUTAL</span>
     </footer>
   </div>
 </body>
