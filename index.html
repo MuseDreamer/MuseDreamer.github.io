@@ -1,54 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Ombra's Terminal // Hub</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ombra's Terminal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page">
+<body data-boot="Booting Core Systems...">
   <canvas id="rain-canvas"></canvas>
 
-  <div class="win window">
-    <div class="titlebar">
-      <div class="title">MAIN TERMINAL HUB</div>
-      <div class="title-controls">
-        <button class="win-btn">_</button>
-        <button class="win-btn">▢</button>
-        <button class="win-btn close">✕</button>
-      </div>
-    </div>
-
-    <div class="menu-bar">
-      <nav class="menu-links">
-        <a class="navlink active" href="index.html">Home</a>
-        <a class="navlink" href="portfolio.html">Portfolio</a>
-        <a class="navlink" href="music.html">Music</a>
-        <a class="navlink" href="links.html">Links</a>
-        <a class="navlink" href="n0xt.html">N0xt</a>
-      </nav>
-    </div>
-
-    <div class="window-body">
-      <section class="panel">
-        <h2>Welcome</h2>
-        <p>
-          > System initialized.<br>
-          > User detected: <strong>ERR</strong><br>
-          > Environment: WIN95_cus.win
-        </p>
-        <p>
-          Select a module above to continue.
-        </p>
-      </section>
-    </div>
-
-    <div class="statusbar">
-      <span>STATUS: OK</span>
-      <span>THEME: Cyan95</span>
-      <span>MODE: GUI</span>
-    </div>
+  <div id="boot-splash">
+    <div class="splash-logo">NEON TERMINAL</div>
+    <div class="splash-line"></div>
   </div>
+
+  <div class="main-container">
+    <header>
+      <h1>Ombra’s Terminal</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="music.html">Music</a>
+        <a href="n0xt.html">N0XT</a>
+        <a href="links.html">Links</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Welcome</h2>
+      <p>Welcome to Ombra’s digital terminal. Explore sound, art, and creation through the neon veil.</p>
+    </section>
+
+    <footer>
+      <p>© 2025 Ombra. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
