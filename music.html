@@ -1,85 +1,50 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
   <title>Prophett — Music</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="site">
-    <div class="nav">
-      <div class="brand">
-        <span class="logo" aria-hidden></span>
-        <h1>Prophett</h1>
-      </div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="music.html" class="active">Music</a>
-        <a href="n0xt.html">N0XT</a>
-        <a href="links.html">Links</a>
-      </div>
-    </div>
+<div class="background"></div>
 
-    <div class="card">
-      <h2>Music</h2>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="n0xt.html">N0XT</a></li>
+  </ul>
+</nav>
 
-      <div class="layout">
-        <div class="track-list">
-          <!-- Track 1 -->
-          <article class="track">
-            <div class="meta">
-              <div class="title">In The Summer We Just Had (Breakcore)</div>
-              <div class="desc">Remix based off the song of the same name.</div>
-              <div class="controls"><audio controls preload="none"><source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg"></audio></div>
-            </div>
-          </article>
+<div class="panel">
+  <h1>Music</h1>
 
-          <!-- Track 2 -->
-          <article class="track">
-            <div class="meta">
-              <div class="title">Null Processing (WIP3)</div>
-              <div class="desc">Breakcore track.</div>
-              <div class="controls"><audio controls preload="none"><source src="music/Null Processing.wip3.mp3" type="audio/mpeg"></audio></div>
-            </div>
-          </article>
-
-          <!-- Track 3 placeholder -->
-          <article class="track">
-            <div class="meta">
-              <div class="title">Track 3 — Placeholder</div>
-              <div class="desc">NOTHING HERE YET</div>
-              <div class="controls"><audio controls preload="none"><source src="music/track3.mp3" type="audio/mpeg"></audio></div>
-            </div>
-          </article>
-
-          <!-- Track 4 placeholder -->
-          <article class="track">
-            <div class="meta">
-              <div class="title">Track 4 — Placeholder</div>
-              <div class="desc">NOTHING HERE YET</div>
-              <div class="controls"><audio controls preload="none"><source src="music/track4.mp3" type="audio/mpeg"></audio></div>
-            </div>
-          </article>
-
-        </div>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-          <h3>Notes</h3>
-          <p style="color:rgba(230,238,252,0.8)">Tracks are loaded from the <code>/music</code> folder. If a track fails to play, check your filenames or server.</p>
-          <div style="height:12px"></div>
-          <h3>Playback</h3>
-          <p style="color:rgba(230,238,252,0.8)">Use native controls. Only one track plays at a time in most browsers — consider stopping before starting another.</p>
-        </aside>
-      </div>
-
-      <div class="site-footer">© 2025 Prophett — Dels </div>
-    </div>
-
+  <div class="track">
+    <div class="track-title">In The Summer We Just Had (Breakcore)</div>
+    <div class="track-desc">A breakcore track based/remixed off of a song with the same name.</div>
+    <audio controls src="music/in_the_summer_we_just_had.mp3"></audio>
   </div>
 
-  <script src="script.js" defer></script>
+  <div class="track">
+    <div class="track-title">Null Processing (WIP3)</div>
+    <div class="track-desc">Breakcore track from 2025.</div>
+    <audio controls src="music/null_processing_wip3.mp3"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-title">File Three</div>
+    <div class="track-desc">NOTHIN HERE YET SRRY</div>
+    <audio controls src="music/file3.mp3"></audio>
+  </div>
+
+  <div class="track">
+    <div class="track-title">File Four</div>
+    <div class="track-desc">NOTHIN HERE YET SRRY</div>
+    <audio controls src="music/file4.mp3"></audio>
+  </div>
+
+</div>
+
 </body>
 </html>
