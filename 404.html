@@ -1,103 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>404 — Lost in the Liminal</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-    :root {
-        --deep-purple: #2a0a40;
-        --purple: #50206e;
-        --lavender: #b88cff;
-        --glass-bg: rgba(255, 255, 255, 0.08);
-        --glass-border: rgba(255, 255, 255, 0.2);
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        background: linear-gradient(180deg, var(--deep-purple), var(--purple));
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Segoe UI", sans-serif;
-        color: var(--lavender);
-        overflow: hidden;
-        animation: fadeIn 0.8s ease-out;
-    }
-
-    /* Glassy container */
-    .container {
-        width: 85%;
-        max-width: 500px;
-        padding: 2rem;
-        background: var(--glass-bg);
-        border: 1px solid var(--glass-border);
-        border-radius: 12px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-        text-align: center;
-        animation: glassPop 0.5s ease-out;
-    }
-
-    h1 {
-        font-size: 2.8rem;
-        margin-bottom: 1rem;
-        color: #e0c8ff;
-        text-shadow: 0 0 8px rgba(165, 82, 255, 0.8);
-    }
-
-    p {
-        font-size: 1.1rem;
-        line-height: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    a {
-        display: inline-block;
-        padding: 0.7rem 1.5rem;
-        background: var(--lavender);
-        color: var(--deep-purple);
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: 0.25s ease;
-        box-shadow: 0 0 12px rgba(184, 140, 255, 0.4);
-    }
-
-    a:hover {
-        background: #d8b7ff;
-        box-shadow: 0 0 18px rgba(184, 140, 255, 0.6);
-        transform: translateY(-2px);
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    @keyframes glassPop {
-        0% { transform: scale(0.85); opacity: 0; }
-        100% { transform: scale(1); opacity: 1; }
-    }
-</style>
+  <title>404 — Lost in the Halls</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>404</h1>
-        <p>
-            <strong>HEY! STOP RIGHT THERE!</strong><br><br>
-            It seems you’ve stumbled across something that either doesn’t exist,<br>
-            or hasn’t been finished yet.  
-            No worries — let's get you back on the right path.
-        </p>
+<div class="background"></div>
 
-        <a href="index.html">Return Home</a>
-    </div>
+<div class="panel">
+  <h1>404 — Lost?</h1>
+  <p class="error">
+    HEY! STOP RIGHT THERE!  
+    It seems you’ve stumbled into a room that either doesn’t exist  
+    or hasn’t been finished yet.<br><br>
+    No worries — let’s get you back on the right path.
+  </p>
+
+  <a class="button" href="index.html">Return Home</a>
+</div>
+
 </body>
 </html>
