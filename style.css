@@ -1,240 +1,92 @@
-/* ===============================
-   OMBRA TERMINAL THEME (Pixel Rain Edition)
-   =============================== */
+/* ============================
+   FRUTIGER AERO GLOBAL STYLE
+   ============================ */
 
 :root {
-  --bg: #0a010f;
-  --accent1: #461e53;
-  --accent2: #661f49;
-  --accent3: #84345b;
-  --accent4: #d0595d;
-  --text: #f2f2f2;
-  --scanline-opacity: 0.05;
-}
+  --glass: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --accent-blue: #6ecbff;
+  --accent-green: #8cf27c;
+  --text-dark: #1a1a1a;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --radius: 22px;
+  --blur: 18px;
 }
 
 html, body {
-  width: 100%;
+  margin: 0;
+  padding: 0;
   height: 100%;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "VT323", monospace;
-  font-size: 1.2rem;
-  overflow: hidden;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #6ecbff, #8cf27c);
+  overflow-x: hidden;
 }
 
-canvas#rain-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
+/* Responsive Typography */
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0;
+}
+h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+p, li {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
-/* ===============================
-   Scene Layers
-   =============================== */
-#scene {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.layer {
-  position: absolute;
-  width: 200%;
-  height: 100%;
-  background-repeat: repeat-x;
-  image-rendering: pixelated;
-  opacity: 0.8;
-  animation: move-layer 60s linear infinite;
-}
-
-.layer.trees {
-  background-image: url("images/trees.png");
-  bottom: 0;
-  animation-duration: 100s;
-}
-
-.layer.lake {
-  background-image: url("images/lake.png");
-  bottom: 0;
-  opacity: 0.6;
-  animation-duration: 80s;
-}
-
-.layer.bustop {
-  background-image: url("images/bustop.png");
-  bottom: 0;
-  opacity: 1;
-  animation-duration: 120s;
-}
-
-@keyframes move-layer {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ===============================
-   Terminal Container
-   =============================== */
-
-.main-container {
-  position: relative;
-  z-index: 3;
-  width: 85%;
-  max-width: 900px;
-  margin: 5rem auto;
-  padding: 2rem;
-  border: 2px solid var(--accent3);
-  background: rgba(10, 1, 15, 0.8);
-  backdrop-filter: blur(2px);
-  box-shadow: 0 0 15px var(--accent4);
-  animation: fadeIn 2s ease;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-header h1 {
-  color: var(--accent4);
-  text-shadow: 0 0 10px var(--accent3);
-  font-size: 2.4rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text);
-  margin: 0 0.5rem;
-  transition: color 0.2s ease, text-shadow 0.3s ease;
-}
-
-nav a:hover, nav a.active {
-  color: var(--accent4);
-  text-shadow: 0 0 6px var(--accent4);
-}
-
-/* ===============================
-   Lists, Links, Music, etc.
-   =============================== */
-
-ul.skills, ul.music-list, .band-links ul {
-  list-style: none;
-  text-align: center;
-}
-
-ul.skills li, ul.music-list li {
-  margin: 0.5rem 0;
-}
-
-.band-photos .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+/* Navigation */
+nav {
+  display: flex;
   gap: 1rem;
-  margin: 1rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+nav a {
+  padding: 0.6rem 1.2rem;
+  background: var(--glass);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--blur));
+  color: var(--text-dark);
+  text-decoration: none;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.25s;
+}
+nav a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.band-photos img {
-  width: 100%;
-  border: 2px solid var(--accent3);
-  border-radius: 3px;
-  image-rendering: pixelated;
-  filter: brightness(0.8);
-  transition: all 0.3s ease;
+/* Main Content Card */
+.main-container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 6vh auto;
+  padding: 2rem;
+  background: var(--glass);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
 }
 
-.band-photos img:hover {
-  filter: brightness(1.2);
-  box-shadow: 0 0 10px var(--accent4);
-  transform: scale(1.02);
+/* Floating Bubbles */
+.bubble {
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  filter: blur(3px);
+  animation: float 12s infinite ease-in-out;
+}
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { transform: translateY(-160vh); opacity: 0; }
 }
 
 footer {
   text-align: center;
-  margin-top: 1rem;
-  opacity: 0.8;
-  font-size: 1rem;
-}
-
-/* ===============================
-   Boot Splash
-   =============================== */
-
-#boot-splash {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 10;
-  animation: splashFade 3s forwards;
-}
-
-.splash-logo {
-  font-size: 2rem;
-  color: var(--accent4);
-  text-shadow: 0 0 10px var(--accent3);
-  margin-bottom: 1rem;
-}
-
-.splash-line {
-  width: 80%;
-  height: 2px;
-  background: var(--accent4);
-  animation: loadLine 2s ease-in-out forwards;
-}
-
-@keyframes loadLine {
-  from { width: 0; }
-  to { width: 80%; }
-}
-
-@keyframes splashFade {
-  0%, 70% { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-/* ===============================
-   Scanline Flicker
-   =============================== */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: repeating-linear-gradient(
-    rgba(255,255,255,var(--scanline-opacity)) 0px,
-    transparent 2px,
-    rgba(0,0,0,0.02) 4px
-  );
-  pointer-events: none;
-  z-index: 5;
-  animation: flicker 0.2s infinite;
-}
-
-@keyframes flicker {
-  0%, 100% { opacity: 0.04; }
-  50% { opacity: 0.07; }
-}
-
-/* ===============================
-   Simple Fade Animation
-   =============================== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  margin-top: 2rem;
+  opacity: 0.7;
 }
