@@ -1,34 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Prophett's Hub | About</title>
+  <meta charset="utf-8">
+  <title>Prophett — About</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site">
+    <div class="nav">
+      <div class="brand">
+        <span class="logo" aria-hidden></span>
+        <h1>Prophett</h1>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="music.html">Music</a>
+        <a href="n0xt.html">N0XT</a>
+        <a href="links.html">Links</a>
+      </div>
+    </div>
 
-<div class="main-container">
-  <header>
-    <h1>About Me</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="music.html">Music</a>
-      <a href="n0xt.html">N0XT</a>
-      <a href="links.html">Links</a>
-    </nav>
-  </header>
+    <div class="card">
+      <h2>About Ombra / Prophett</h2>
 
-  <section>
-    <img src="images/ombra.jpg" style="width:180px;border-radius:22px;">
-    <p><strong>Hi! I'm Prophett — the creator of this here website you are looking at.  
-    I write music, make art, experiment, and build little corners of the internet like this one. Feel free to hang around!</p>
-  </section>
+      <div style="display:flex;flex-wrap:wrap;gap:18px;">
+        <div style="flex:1 1 320px; max-width:360px;">
+          <img src="images/ombra_photo.jpg" alt="Ombra portrait" class="about-photo">
+        </div>
+        <div style="flex:2 1 380px;">
+          <p><strong>Hi — I'm Dels (Prophett).</strong> I make music, visuals, and build small corners of the web.  
+          This site collects my tracks, some band info, and a few links.  
+          Thanks for stopping by.</p>
 
-  <footer>© 2025 Prophett</footer>
-</div>
+          <p style="margin-top:12px; color:rgba(230,238,252,0.75)">If you want to collaborate, find me on the links page.</p>
+        </div>
+      </div>
 
-<script src="script.js"></script>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
