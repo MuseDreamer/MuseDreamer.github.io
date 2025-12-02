@@ -1,33 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Prophett's Hub | Home</title>
+  <meta charset="utf-8">
+  <title>Prophett — Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <link rel="stylesheet" href="style.css">
+  <script>/* quick cache delete for older browsers */ if('caches' in window) caches.keys().then(n=>n.forEach(k=>caches.delete(k)));</script>
 </head>
-
 <body>
+  <div class="site">
+    <div class="nav">
+      <div class="brand">
+        <span class="logo" aria-hidden></span>
+        <h1>Prophett</h1>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="music.html">Music</a>
+        <a href="n0xt.html">N0XT</a>
+        <a href="links.html">Links</a>
+      </div>
+    </div>
 
-<div class="main-container">
-  <header>
-    <h1>Prophett</h1>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="music.html">Music</a>
-      <a href="n0xt.html">N0XT</a>
-      <a href="links.html">Links</a>
-    </nav>
-  </header>
+    <div class="card">
+      <h2>Welcome</h2>
+      <p>
+        You’re standing at a door in the sand.  
+        Use the links above to travel around.
+      </p>
+      <div style="height:18px"></div>
+      <div class="site-footer">Tip: press <strong>M</strong> to jump to the Music page.</div>
+    </div>
+  </div>
 
-  <section>
-    <p>Welcome to the website that I made. You are currently at the landing page, or better known as, home page.</p>
-  </section>
-
-  <footer>© 2025 Prophett</footer>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
