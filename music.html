@@ -2,35 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Music | Ombra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prophett | Music</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: linear-gradient(180deg, #9ee7ff, #b4ffd8, #ffffff);
+      background-attachment: fixed;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-y: scroll;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      color: #004466;
+      font-weight: 700;
+      font-size: 2.8rem;
+      text-shadow: 0 2px 4px rgba(255,255,255,0.6);
+    }
+
+    .music-container {
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto 80px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .track-card {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .track-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #006688;
+    }
+
+    .track-desc {
+      font-size: 1rem;
+      color: #004455;
+      opacity: 0.8;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+      color: #005577;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  </style>
 </head>
+
 <body>
-  <div id="scene"></div>
-  <canvas id="rain-canvas"></canvas>
 
-  <div class="main-container">
-    <header>
-      <h1>Music Files</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="music.html" class="active">Music</a>
-        <a href="n0xt.html">N0XT</a>
-        <a href="links.html">Links</a>
-      </nav>
-    </header>
+  <h1>Prophett — Music Library</h1>
 
-    <ul class="music-list">
-      <li><audio controls><source src="music/in the summer we just had Breakcore.mp3" type="audio/mp3"></audio></li>
-      <li><audio controls><source src="music/Null Processing.wip3.mp3" type="audio/mp3"></audio></li>
-    </ul>
+  <div class="music-container">
 
-    <footer>
-      <p>© 2025 Ombra | All rights reserved.</p>
-    </footer>
+    <!-- Track 1 -->
+    <div class="track-card">
+      <div class="track-title">In The Summer We Just Had (Breakcore)</div>
+      <div class="track-desc">
+        A remix of a song by the same name.
+      </div>
+      <audio controls>
+        <source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- Track 2 -->
+    <div class="track-card">
+      <div class="track-title">Null Processing (WIP 3)</div>
+      <div class="track-desc">
+        A breakcore experimental track.
+      </div>
+      <audio controls>
+        <source src="music/Null Processing.wip3.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- Track 3 -->
+    <div class="track-card">
+      <div class="track-title">REPLACE_ME_3</div>
+      <div class="track-desc">
+        Add a description for this track — genre, vibe, or mood.
+      </div>
+      <audio controls>
+        <source src="music/your-third-track.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- Track 4 -->
+    <div class="track-card">
+      <div class="track-title">REPLACE_ME_4</div>
+      <div class="track-desc">
+        Add a description for this track — maybe a demo, idea, or single?
+      </div>
+      <audio controls>
+        <source src="music/your-fourth-track.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
   </div>
-  <script src="script.js"></script>
+
+  <a href="index.html" class="back-button">← Back to Home</a>
+
 </body>
 </html>
