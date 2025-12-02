@@ -2,51 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ombra | Terminal Home</title>
+  <title>Prophett's Hub | Home</title>
   <link rel="stylesheet" href="style.css">
-
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <script>
-    if ('caches' in window) caches.keys().then(names => names.forEach(n => caches.delete(n)));
-    window.addEventListener('load', () => {
-      document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
-        const attr = el.tagName === 'LINK' ? 'href' : 'src';
-        const base = el.getAttribute(attr).split('?')[0];
-        el.setAttribute(attr, base + '?v=' + Date.now());
-      });
-    });
-  </script>
 </head>
+
 <body>
-  <div id="scene"></div>
-  <canvas id="rain-canvas"></canvas>
 
-  <div id="boot-splash">
-    <div class="splash-logo">OMBRA SYSTEMS BOOTING...</div>
-    <div class="splash-line"></div>
-  </div>
+<div class="main-container">
+  <header>
+    <h1>Prophett</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="music.html">Music</a>
+      <a href="n0xt.html">N0XT</a>
+      <a href="links.html">Links</a>
+    </nav>
+  </header>
 
-  <div class="main-container">
-    <header>
-      <h1>Welcome to Ombra’s Terminal</h1>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="music.html">Music</a>
-        <a href="n0xt.html">N0XT</a>
-        <a href="links.html">Links</a>
-      </nav>
-    </header>
+  <section>
+    <p>Welcome to the website that I made. You are currently at the landing page, or better known as, home page.</p>
+  </section>
 
-    <p>Initializing systems...<br>Welcome to the digital domain of Ombra. Explore, listen, and observe.</p>
+  <footer>© 2025 Prophett</footer>
+</div>
 
-    <footer>
-      <p>© 2025 Ombra | All rights reserved.</p>
-    </footer>
-  </div>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
