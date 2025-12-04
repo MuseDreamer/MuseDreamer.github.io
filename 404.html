@@ -1,24 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>404 — Lost in the Halls</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Lost?</title>
+  <style>
+    :root {
+      --black: #0A0A0A;
+      --charcoal: #1A1A1A;
+      --soft-gray: #8C8C8C;
+      --white: #D9D9D9;
+      --accent: #3A3A3A;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: "Courier New", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: var(--charcoal);
+      padding: 40px;
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--soft-gray);
+      color: var(--black);
+      text-decoration: none;
+      transition: 0.15s;
+    }
+
+    a.button:hover {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+    }
+  </style>
 </head>
-
 <body>
-<div class="background"></div>
-
-<div class="panel">
-  <h1>404 — Lost?</h1>
-  <p class="error">
-    HEY! STOP RIGHT THERE!  
-    It seems you’ve stumbled into a room that either doesn’t exist  
-    or hasn’t been finished yet.<br><br>
-    No worries — let’s get you back on the right path.
-  </p>
-
-  <a class="button" href="index.html">Return Home</a>
-</div>
-
+  <div class="container">
+    <h1>404 — Lost?</h1>
+    <p>HEY! STOP RIGHT THERE! It seems you’ve stumbled into a room that either doesn’t exist or hasn’t been finished yet.<br><br>No worries — let’s get you back on the right path.</p>
+    <a href="index.html" class="button">Return Home</a>
+  </div>
 </body>
 </html>
