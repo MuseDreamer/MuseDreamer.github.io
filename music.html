@@ -1,50 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Prophett — Music</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Library</title>
+  <style>
+    :root {
+      --black: #0A0A0A;
+      --charcoal: #1A1A1A;
+      --soft-gray: #8C8C8C;
+      --white: #D9D9D9;
+      --accent: #3A3A3A;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: "Courier New", monospace;
+      padding: 20px;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .container {
+      background: var(--charcoal);
+      width: 90%;
+      max-width: 900px;
+      padding: 30px;
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 30px;
+    }
+
+    .track {
+      background: var(--accent);
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid var(--soft-gray);
+    }
+
+    .track h2 {
+      margin: 0 0 10px 0;
+      color: var(--white);
+    }
+
+    audio {
+      width: 100%;
+      outline: none;
+    }
+
+    a {
+      color: var(--soft-gray);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
-<div class="background"></div>
+  <div class="container">
+    <h1>Music Library</h1>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="music.html">Music</a></li>
-    <li><a href="about.html">About Me</a></li>
-    <li><a href="n0xt.html">N0XT</a></li>
-  </ul>
-</nav>
+    <!-- Track Template (Duplicate and replace SRC + TITLE) -->
+    <div class="track">
+      <h2>Null Processing.wip3</h2>
+      <audio controls>
+        <source src="music/Null Processing.wip3.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
-<div class="panel">
-  <h1>Music</h1>
+    <div class="track">
+      <h2>in_the_summer_we_just_had</h2>
+      <audio controls>
+        <source src="music/in the summer we just had Breakcore.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
-  <div class="track">
-    <div class="track-title">In The Summer We Just Had (Breakcore)</div>
-    <div class="track-desc">A breakcore track based/remixed off of a song with the same name.</div>
-    <audio controls src="music/in_the_summer_we_just_had.mp3"></audio>
+    <p><a href="index.html">&#8592; Back to Home</a></p>
   </div>
-
-  <div class="track">
-    <div class="track-title">Null Processing (WIP3)</div>
-    <div class="track-desc">Breakcore track from 2025.</div>
-    <audio controls src="music/null_processing_wip3.mp3"></audio>
-  </div>
-
-  <div class="track">
-    <div class="track-title">File Three</div>
-    <div class="track-desc">NOTHIN HERE YET SRRY</div>
-    <audio controls src="music/file3.mp3"></audio>
-  </div>
-
-  <div class="track">
-    <div class="track-title">File Four</div>
-    <div class="track-desc">NOTHIN HERE YET SRRY</div>
-    <audio controls src="music/file4.mp3"></audio>
-  </div>
-
-</div>
-
 </body>
 </html>
