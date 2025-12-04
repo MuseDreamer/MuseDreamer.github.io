@@ -1,27 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Prophett — Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <style>
+    /* --- Color Palette (Mix of Palette A + B) --- */
+    :root {
+      --black: #0A0A0A;
+      --charcoal: #1A1A1A;
+      --soft-gray: #8C8C8C;
+      --white: #D9D9D9;
+      --accent: #3A3A3A;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--soft-gray);
+      font-family: "Courier New", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: var(--charcoal);
+      padding: 40px;
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 25px;
+      padding: 0;
+    }
+
+    .nav {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .nav a {
+      color: var(--black);
+      background: var(--soft-gray);
+      border: none;
+      padding: 8px 16px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: 0.15s ease;
+    }
+
+    .nav a:hover {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+    }
+  </style>
 </head>
-
 <body>
-<div class="background"></div>
+  <div class="container">
+    <h1>Welcome to my website!</h1>
+    <p>
+      You are currently in the foyer, or front page! Here you can travel to the
+      different pages, so feel free to explore!
+    </p>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="music.html">Music</a></li>
-    <li><a href="about.html">About Me</a></li>
-    <li><a href="n0xt.html">N0XT</a></li>
-  </ul>
-</nav>
-
-<div class="panel">
-  <h1>Welcome to Prophett</h1>
-  <p>A liminal-feeling space where soft nature meets abandoned halls.<br>
-  Explore music, projects, and wander the halls of my little world.</p>
-</div>
-
+    <div class="nav">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="music.html">Music</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </body>
 </html>
